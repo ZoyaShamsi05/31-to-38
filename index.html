@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+
+  //CHAPTER NUMBER 31 TO 34//
+    console.log("CHAPTER NUMBER 31 TO 34 ");
+
+
+    //question 1//
+    console.log("question number 1 : ");
+    let today = new Date();
+    console.log(today);
+
+
+    //question 2//
+    console.log("question number 2 : ");
+    let month = ["january" , "february" , "march" , "april" , "may" , "june" , "july" , "august" , "september" , "october" , "november" , "december"];
+    let m = new Date();
+    let currentMonth = month[m.getMonth()];
+    console.log("The current month is " +currentMonth);
+    alert("The current month is " + currentMonth);
+
+
+    //question 3//
+    console.log("question number 3 : ");
+    let days = ["sunday" ,"monday" , "tuesday" , "wednesday" , "thursday" , "friday" , "saturday" ];
+    let d = new Date();
+    let day = days[d.getDay()];
+    let toDay = day.slice(0,3);
+    console.log("Today is " + toDay);
+
+
+    //question 4//
+    console.log("question number 4 : ");
+    let thisDay = new Date();
+    if(thisDay.getDay()==6 || thisDay.getDay()==0){
+        console.log("it is fun day !");
+        alert("it is fun day");
+    }
+    else{
+        console.log("it is a week day");
+        alert("it is a week day");
+    }
+
+
+    //question 5//
+    console.log("question number 5 : ");
+    let date = new Date();
+    if(date <= 15){
+        console.log("first fifteen days of the month");
+        alert("first fifteen days of the month");
+    }
+    else{
+        console.log("last fifteen days of the month");
+        alert("last fifteen days of the month");
+    }
+
+
+    //question 6//
+    console.log("question number 6 : ");
+    let mlliSecSinceJan= Date.now();
+    console.log("the elapsed milliseconds since 1st january 1970 = " + mlliSecSinceJan);
+    let elapsedMins = (mlliSecSinceJan/1000)/60;
+    console.log("the elapsed minutes since 1st january 1970 = " + elapsedMins);
+    
+
+    //question 7//
+    console.log("question number 7 : ");
+    let currentTime = new Date();
+    let currentHour = currentTime.getHours();
+
+if (currentHour < 12) {
+  console.log("It's AM !");
+} else {
+  console.log("It's PM !");
+}
+
+
+    //question 8//
+    console.log("question number 8 : ");
+    let laterDate = new Date("2020/12/31");
+    console.log("the last day for the lst month of 2020 is " + laterDate);
+
+
+    //question 9//
+    console.log("question number 9 : ");
+    let thisday = new Date();
+    let startDay = new Date("june 18 , 2015");
+    var numOfDay = startDay.getTime() - thisday.getTime();
+    let numOfDays = Math.round(numOfDay / (1000*60*60*24));
+    console.log( Math.abs(numOfDays)  + " days have passed since 1st Ramzan , 2015");
+
+
+    //question 10//
+    console.log("question number 10 : ");
+    let firstDay = new Date("january 1 , 2015");
+    let currentDay = new Date("august 16 , 2024");
+    let seconds = currentDay.getTime() - firstDay.getTime();
+    let numOfSec = seconds/1000;
+    console.log(numOfSec + " seconds have passed from beginning of 2015 to 16 august 2024. ");
+
+
+    //question 11//
+    console.log("question number 11 : ");
+    let h = new Date();
+    console.log( "the current time is "+ h);
+    let hAgo = h.getHours()-1;
+    let hr = h.setHours(hAgo);
+    console.log("the time an hour ago was " + h);
+
+    //question 12//
+     console.log("question number 12 : ")
+    let y = new Date();
+    let pastYear = y.getFullYear() - 100;
+    y.setFullYear(pastYear);
+    console.log("the day 100 years ago was " + y);
+
+
+
+
+
+    //question 13//
+    console.log("question numer 13 : ");
+    let dt = new Date();
+    let age = parseInt(prompt("please enter you age to calculate your birth year"));
+    let intYear = dt.getFullYear() - age;
+    console.log("you were born in the year "  + intYear);
+
+
+
+
+
+
+    //question 14//
+    console.log("question number 14 : ");
+    let name = prompt("please enter your name " );
+    console.log("Customer's name = " + name);
+    console.log("Current month = " + currentMonth);
+    let numOfUnits = 390;
+    console.log("Number of Units = " + numOfUnits);
+    let chargePerUnit = 32;
+    console.log("Charges per Unit = " + chargePerUnit);
+    let amount = numOfUnits * chargePerUnit;
+    console.log("Net Amount Payable within duedate " + amount);
+    let surcharge = 400;
+    console.log("Late Payment Surcharge = " + surcharge);
+    let amountAfterDueDate = amount + surcharge ;
+    console.log("Amount after due date = " + amountAfterDueDate);
+
+
+
+//     //CHAPTER 35 TO 38//
+    console.log("CHAPTER NUMBER 35 TO 38");
+
+    //question 1//
+    console.log("question number 1 ");
+    function tellTime() {
+ let now = new Date();
+ let theHr = now.getHours();
+ let theMin = now.getMinutes();
+ alert("Current time: "+ theHr + ":" + theMin);
+console.log( "Current time: "+ theHr + ":" + theMin);
+ }
+ tellTime();
+
+
+ //question 2//
+ console.log("question number 2");
+ function greetUser(){
+    let firstName = prompt("please enter your first name");
+    let lastName = prompt("please enter your last name");
+    console.log("Good Morning ! " + firstName + lastName);
+    alert("Hello! " + firstName + lastName);
+ }
+ greetUser();
+
+
+ //question 3//
+ console.log("question number 3");
+ function sum(){
+    let num1 = parseInt( prompt("enter first number"));
+    let num2 = parseInt(prompt("enter second number"));
+    let sum = num1 + num2 ;
+    console.log("the addition of two numbers is " + sum);
+    alert("the addition of two numbers is " + sum);
+ }
+ sum();
+
+
+
+ //question 4//
+ function calculator(){
+    let number1 =parseInt( prompt("enter a number "));
+    let number2 =parseInt(prompt("enter another number"));
+    let operator = prompt("enter an operator : '+' , '-' , '*' , '/'");
+    let result;
+    switch(operator){
+        case '+':
+        result = number1+number2
+        break;
+
+        case '-':
+         result= (number1-number2)
+         break;
+
+        case'*':
+        result= number1*number2
+        break;
+
+         case'/':
+        result= (number1/number2)
+        break;
+    }
+    alert("the result is = " + result)
+ }
+   calculator();
+
+
+   //question 5//
+   console.log("question number 5 ");
+   function square(){
+   let number = prompt("enter a number for its square ");
+   let square = number ** 2;
+   console.log(`the number is ${number} and its square is ${square}`);
+}
+ square();
+
+
+   //question 6//
+   console.log("question number 6");
+   function factorial(){
+let number = parseInt(prompt('Enter a positive integer: '));
+
+if (number < 0) {
+    console.log('Error! Factorial for negative number does not exist.');
+}
+else if (number === 0) {
+    console.log(`The factorial of ${number} is 1.`);
+}
+else {
+    let fact = 1;
+    for (i = 1; i <= number; i++) {
+        fact *= i;
+    }
+    console.log(`The factorial of ${number} is ${fact}.`);
+}
+}
+factorial();
+
+
+//question 7//
+console.log("question number 7");
+function counting(){
+    let startNum = prompt("please enter the starting number");
+    let endNum = prompt("please enter the ending number");
+    for(i=startNum;i<=endNum;i++){
+        console.log(i);
+    }
+}
+console.log("the required counting is ");
+counting();
+
+
+
+//question 8//
+console.log("question number 8");
+function hypotenuse(){
+    let base = parseInt( prompt("please enter a number for base"));
+    let perpendicular = parseInt( prompt("please enter a number for perpendicular"));
+    let sq1 = base**2;
+    let sq2 = perpendicular**2;
+
+    let calculate = sq1 + sq2;
+    console.log(`hypotenuse = base + perpendicular`);
+    console.log(`hyp = ${base} + ${perpendicular}`);
+    console.log(`hyp = ${sq1} + ${sq2}`);
+    console.log(`hyp = ${calculate}`);
+}
+hypotenuse();
+
+
+
+//question 9//
+console.log("question number 9");
+function area(){
+    let height = parseInt( prompt("please enter height to calculte the area of the rectangle"));
+    let width = parseInt( prompt("please enter width to calculate the area of the triangle"));
+    let area = height*width;
+    console.log("the area of the rectangle with height " + height + " and width " + width  + " is " + area);
+}
+area();
+
+
+
+//question 10//
+console.log("question number 10");
+function reverse(str) {
+    let rev_str = "";
+    for (let i = str.length - 1; i >= 0; i--) {
+        rev_str += str[i];
+    }
+    return rev_str;
+}
+function is_palindrome(str) {
+    reverse_str = reverse(str);
+    if (reverse_str === str) {
+        console.log("passed string is palindrome ");
+    }
+    else {
+        console.log("passed string is not palindrome")
+    }
+}
+let txt = prompt("please enter a text to check if it is palindrome or not");
+is_palindrome(txt);
+
+
+
+//question 11//
+console.log("question number 11");
+function toTitleCase(str) {
+  return str.replace(
+    /\w\S*/g,
+    text => text.charAt(0).toUpperCase() + text.substring(1).toLowerCase()
+  );
+}
+let string = "i am studying javascript."
+console.log(`"${string}" becomes "${toTitleCase(string)}"`);
+
+
+
+//question 12//
+console.log("question number 12");
+function longestWord(string) {
+    let stringg = string.split(" ");
+    let longest = 0;
+    let longest_word = null;
+    for (let i = 0; i < stringg.length; i++) {
+        if (longest < stringg[i].length) {
+            longest = stringg[i].length;
+            longest_word = stringg[i];
+        }
+    }
+    return longest_word;
+};
+
+console.log(longestWord("web development tutorial"));
+
+
+
+//question 13//
+console.log("question number 13");
+function countString(str, letter) {
+    let count = 0;
+    for (let i = 0; i < str.length; i++) {
+        if (str.charAt(i) == letter) {
+            count += 1;
+        }
+    }
+    return count;
+}
+const st = prompt('Enter a string: ');
+const letterToCheck = prompt('Enter a letter to check: ');
+const result = countString(st, letterToCheck);
+console.log(result);
+
+
+
+//question 14//
+console.log("question number 14");
+function circumference(){
+    let rad = parseFloat(prompt("please enter the radius of the circle to calculte its circumference"));
+    let circum = parseFloat (2*Math.PI*rad).toFixed(2);
+    console.log("the value of the required circumcircle is " + circum);
+}
+function areaOfCircle(){
+    let r = parseFloat(prompt("please enter the radius for the area of the circle"));
+    let area = parseFloat(Math.PI*(r**2)).toFixed(2);
+    console.log("the required area of the circle is " + area);
+}
+circumference();
+areaOfCircle();
+
+
+
+
+
+
+
+</script>
+</html>
